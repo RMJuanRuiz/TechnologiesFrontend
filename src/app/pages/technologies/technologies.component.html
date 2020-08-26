@@ -1,0 +1,11 @@
+<h1 class="mt-3">Technologies <small>Backend and Frontend</small></h1>
+
+<hr />
+
+<div class="row row-cols-1 row-cols-sm-3">
+  <app-technology-card
+    [technology]="technology"
+    *ngFor="let technology of technologies"
+    class="col"
+  ></app-technology-card>
+</div>

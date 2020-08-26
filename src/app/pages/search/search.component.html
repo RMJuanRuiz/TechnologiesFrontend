@@ -1,0 +1,21 @@
+<div class="container mt-3">
+  <h1>
+    Searcing: <small>{{ query }}</small>
+  </h1>
+
+  <div class="row" *ngIf="technologies.length == 0">
+    <div class="col-md-12">
+      <div class="alert alert-info" role="alert">
+        There is not technologies with this pattern: {{ query }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-sm-3">
+    <app-technology-card
+      [technology]="technology"
+      *ngFor="let technology of technologies"
+      class="col"
+    ></app-technology-card>
+  </div>
+</div>
